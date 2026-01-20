@@ -1,0 +1,404 @@
+<!-- 
+Nombre
+Grado y Grupo
+Carrera
+Imagen (avatar)
+Descripción
+Objetivo Profesional
+Formación General
+Idiomas
+Certificaciones
+Habilidades
+-->
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil | Cristian</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      :root {
+        --cv-bg: #f6f7f9;
+        --cv-card: #ffffff;
+        --cv-text: #111827;
+        --cv-muted: #6b7280;
+        --cv-line: #e5e7eb;
+        --cv-soft: #f3f4f6;
+        --cv-accent: #111827;
+      }
+
+      .cv-page {
+        min-height: 100vh;
+        background: var(--cv-bg);
+        color: var(--cv-text);
+      }
+
+      .cv-shell {
+        max-width: 1200px;
+      }
+
+      .cv-card {
+        background: var(--cv-card);
+        border: 1px solid var(--cv-line);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+      }
+
+      .cv-sidebar {
+        background: linear-gradient(180deg, var(--cv-soft) 0%, #ffffff 100%);
+        border-right: 1px solid var(--cv-line);
+      }
+
+      .cv-avatar {
+        width: 84px;
+        height: 84px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+        background: #111827;
+        color: #ffffff;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        margin: 0 auto;
+      }
+
+      .cv-avatar img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+
+      .cv-avatar span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cv-name {
+        font-weight: 800;
+        letter-spacing: -0.3px;
+        line-height: 1.1;
+      }
+
+      .cv-role {
+        color: var(--cv-muted);
+        font-size: 0.95rem;
+      }
+
+      .cv-label {
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #4b5563;
+        margin-bottom: 8px;
+      }
+
+      .cv-item {
+        color: var(--cv-muted);
+        font-size: 0.92rem;
+        line-height: 1.35;
+      }
+
+      .cv-item strong {
+        color: #374151;
+        font-weight: 700;
+      }
+
+      .cv-sep {
+        height: 1px;
+        background: var(--cv-line);
+        margin: 14px 0;
+      }
+
+      .cv-badge {
+        display: inline-block;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--cv-line);
+        background: #ffffff;
+        color: #374151;
+        font-size: 0.8rem;
+        margin: 4px 6px 0 0;
+      }
+
+      .cv-section-title {
+        font-weight: 800;
+        letter-spacing: -0.2px;
+        margin-bottom: 8px;
+      }
+
+      .cv-paragraph {
+        color: var(--cv-muted);
+        margin-bottom: 0;
+      }
+
+      .cv-timeline {
+        display: grid;
+        gap: 12px;
+      }
+
+      .cv-timeline-item {
+        border: 1px solid var(--cv-line);
+        border-radius: 12px;
+        padding: 12px 14px;
+        background: #ffffff;
+      }
+
+      .cv-timeline-top {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .cv-timeline-role {
+        font-weight: 800;
+        color: #111827;
+        margin: 0;
+      }
+
+      .cv-timeline-date {
+        font-size: 0.85rem;
+        color: #6b7280;
+        white-space: nowrap;
+      }
+
+      .cv-timeline-org {
+        font-size: 0.95rem;
+        color: #374151;
+        margin: 2px 0 0;
+      }
+
+      .cv-actions .btn {
+        border-radius: 12px;
+      }
+
+      .cv-actions .btn-primary {
+        background: var(--cv-accent);
+        border-color: var(--cv-accent);
+      }
+
+      .cv-actions .btn-secondary {
+        background: #ffffff;
+        border-color: var(--cv-line);
+        color: var(--cv-text);
+      }
+
+      .cv-actions .btn-secondary:hover {
+        background: #f9fafb;
+        border-color: #d1d5db;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="cv-page d-flex align-items-center py-5">
+      <div class="container cv-shell">
+        <div class="cv-card">
+          <div class="row g-0">
+            <aside class="col-12 col-md-4 cv-sidebar p-4 p-md-4">
+              <div class="cv-avatar" aria-label="Avatar">
+                <span>CA</span>
+                <img
+                  src="https://imagenes.20minutos.es/files/image_1280_720/uploads/imagenes/2018/08/10/761255.jpg"
+                  alt="Foto de perfil"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="text-center mt-3">
+                <h1 class="cv-name h3 mb-1">Cristian Amauri Gonzaga Castañeda</h1>
+                <p class="cv-role mb-0">Desarrollador Web (Backend) · Django</p>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <div>
+                <div class="cv-label">Contacto</div>
+                <div class="cv-item"><strong>Ciudad:</strong> Morelos</div>
+                <div class="cv-item"><strong>Portafolio:</strong> www.cristian.dev</div>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <div>
+                <div class="cv-label">Perfil</div>
+                <p class="cv-item mb-0">
+                  Estudiante de Ingeniería de Sistemas con enfoque en backend y frontend. Busco crear soluciones
+                  limpias, escalables y con buena experiencia de usuario.
+                </p>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <div>
+                <div class="cv-label">Habilidades</div>
+                <span class="cv-badge">Django</span>
+                <span class="cv-badge">Python</span>
+                <span class="cv-badge">SQL</span>
+                <span class="cv-badge">Git</span>
+                <span class="cv-badge">HTML/CSS</span>
+                <span class="cv-badge">Bootstrap</span>
+                <span class="cv-badge">JavaScript</span>
+                <span class="cv-badge">React</span>
+                <span class="cv-badge">Vue</span>
+                <span class="cv-badge">React Native</span>
+                <span class="cv-badge">Android Studio</span>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <div>
+                <div class="cv-label">Idiomas</div>
+                <div class="cv-item d-flex justify-content-between">
+                  <span>Español</span><span class="text-muted">Nativo</span>
+                </div>
+                <div class="progress" style="height: 8px; background: #e5e7eb">
+                  <div class="progress-bar" style="width: 100%; background: #111827"></div>
+                </div>
+                <div class="mt-2 cv-item d-flex justify-content-between">
+                  <span>Inglés</span><span class="text-muted">A2</span>
+                </div>
+                <div class="progress" style="height: 8px; background: #e5e7eb">
+                  <div class="progress-bar" style="width: 40%; background: #111827"></div>
+                </div>
+              </div>
+            </aside>
+
+            <section class="col-12 col-md-8 p-4 p-md-5">
+              <div
+                class="d-flex flex-column flex-sm-row gap-2 align-items-start align-items-sm-center justify-content-between"
+              >
+                <div>
+                  <div class="cv-label mb-2">Currículum</div>
+                  <h2 class="cv-section-title h4 mb-1">Resumen Profesional</h2>
+                  <p class="cv-paragraph">
+                    Orientado a frontend y bases de datos. Me enfoco en escribir código claro, aplicar buenas prácticas
+                    y entregar resultados consistentes.
+                  </p>
+                </div>
+                <div class="cv-actions d-flex gap-2">
+                  <a class="btn btn-primary" href="#" role="button">Descargar PDF</a>
+                  <a class="btn btn-secondary" href="/" role="button">Inicio</a>
+                </div>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <h3 class="cv-section-title h5">Experiencia</h3>
+              <div class="cv-timeline">
+                <div class="cv-timeline-item">
+                  <div class="cv-timeline-top">
+                    <p class="cv-timeline-role">Desarrollo de CURIND - (Evaluación Docente para Cursos de Inducción)</p>
+                    <span class="cv-timeline-date">2025 · 4 meses</span>
+                  </div>
+                  <p class="cv-timeline-org">UTEZ · Proyecto de estadía</p>
+                  <p class="cv-paragraph">
+                    Creación de API, integración con frontend en React y backend en Spring Boot.
+                  </p>
+                </div>
+
+                <div class="cv-timeline-item">
+                  <div class="cv-timeline-top">
+                    <p class="cv-timeline-role">Desarrollo de CMA - (Centro Morelense de Artes)</p>
+                    <span class="cv-timeline-date">2025 - Actualmente</span>
+                  </div>
+                  <p class="cv-timeline-org">UTEZ - Proyecto externo</p>
+                  <p class="cv-paragraph">
+                    Desarrollo del sistema para el CMA, inscripciones, gestión de áreas, generaciones y administración
+                    escolar en general.
+                  </p>
+                </div>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <h3 class="cv-section-title h5">Formación</h3>
+              <div class="cv-timeline">
+                <div class="cv-timeline-item">
+                  <div class="cv-timeline-top">
+                    <p class="cv-timeline-role">Ingeniería de Desarrollo y Gestión de Software</p>
+                    <span class="cv-timeline-date">2023–Actual</span>
+                  </div>
+                  <p class="cv-timeline-org">
+                    Universidad Tecnológica Emiliano Zapata del Estado de Morelos · 8° · Grupo A
+                  </p>
+                  <p class="cv-paragraph">
+                    Bases de datos, estructuras de datos, POO, desarrollo web y fundamentos de seguridad...
+                  </p>
+                </div>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <h3 class="cv-section-title h5">Certificaciones</h3>
+              <div class="row g-3">
+                <div class="col-12 col-lg-6">
+                  <div class="cv-timeline-item h-100">
+                    <div class="cv-timeline-top">
+                      <p class="cv-timeline-role">Linux Essentials</p>
+                      <span class="cv-timeline-date">2025</span>
+                    </div>
+                    <p class="cv-timeline-org mb-0">Cisco</p>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                  <div class="cv-timeline-item h-100">
+                    <div class="cv-timeline-top">
+                      <p class="cv-timeline-role">Endpoint Security</p>
+                      <span class="cv-timeline-date">2025</span>
+                    </div>
+                    <p class="cv-timeline-org mb-0">Cisco</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cv-sep"></div>
+
+              <h3 class="cv-section-title h5">Información</h3>
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <div class="cv-timeline-item">
+                    <p class="cv-timeline-role mb-1">Objetivo</p>
+                    <p class="cv-paragraph">
+                      Crecimiento como desarrollador backend, frontend y contribución en productos con impacto real.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="cv-timeline-item">
+                    <p class="cv-timeline-role mb-1">Fortalezas</p>
+                    <p class="cv-paragraph">
+                      Responsabilidad, comunicación clara, aprendizaje rápido y enfoque en calidad.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
