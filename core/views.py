@@ -10,3 +10,6 @@ def onePage(request):
 def derick(request):
     print("")
     return render(request, 'core/derick.html')
+
+def cristian (request):
+    return render(request, 'core/Cristian.html')
