@@ -13,3 +13,6 @@ def derick(request):
 
 def cristian (request):
     return render(request, 'core/Cristian.html')
+
+def viri(request):
+    return render(request, 'core/viri.html')
