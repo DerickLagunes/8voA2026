@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Johanna Montserrat Pichardo Nava</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Lateral Izquierdo */
+        .sidebar {
+            flex: 1 1 300px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 30px;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.4rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        /* Contenido Principal */
+        .main-content {
+            flex: 2 1 500px;
+            padding: 40px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .info-block {
+            margin-bottom: 15px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 3px;
+        }
+
+        /* Ajustes para impresión */
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <aside class="sidebar">
+        <img src="https://via.placeholder.com/180" alt="Foto de Perfil" class="profile-img">
+        
+        <h2>Habilidades</h2>
+        <ul class="skill-list">
+            <li><i class="fa-solid fa-code"></i> Python, Java, C++</li>
+            <li><i class="fa-solid fa-globe"></i> HTML, CSS, JavaScript</li>
+            <li><i class="fa-solid fa-database"></i> SQL</li>
+            <li><i class="fa-solid fa-vial"></i> Automatización de pruebas</li>
+            <li><i class="fa-solid fa-users"></i> Trabajo en equipo</li>
+            <li><i class="fa-solid fa-lightbulb"></i> Resolución de problemas</li>
+        </ul>
+
+        <h2>Idiomas</h2>
+        <p><strong>Español:</strong> Nativo</p>
+        <p><strong>Inglés:</strong> Básico</p>
+        <p><strong>Francés:</strong> Básico</p>
+
+        <h2>Certificaciones</h2>
+        <p><i class="fa-solid fa-certificate"></i> Cisco Networking Academy - Fundamentos de Redes</p>
+    </aside>
+
+    <main class="main-content">
+        <header>
+            <h1>Johanna Montserrat Pichardo Nava</h1>
+            <span class="subtitle">Ingeniera en Desarrollo y Gestión de Software | 8º A</span>
+        </header>
+
+        <section>
+            <h3><i class="fa-solid fa-user"></i> Sobre Mí</h3>
+            <p>Me gusta disfrutar mi tiempo libre con mis seres más cercanos. Amo a mis mascotas y disfruto mucho aprender cosas nuevas en mi día a día. Soy una persona dedicada que busca constantemente el crecimiento personal y técnico.</p>
+        </section>
+
+        <section>
+            <h3><i class="fa-solid fa-bullseye"></i> Objetivo Profesional</h3>
+            <p>Desarrollarme en una empresa donde pueda aplicar mis conocimientos y habilidades en el desarrollo de software, contribuyendo al crecimiento de la organización y, al mismo tiempo, continuar aprendiendo y mejorando mis competencias profesionales.</p>
+        </section>
+
+        <section>
+            <h3><i class="fa-solid fa-graduation-cap"></i> Formación Académica</h3>
+            <div class="info-block">
+                <strong>Ingeniería en Desarrollo y Gestión de Software</strong><br>
+                <em>Actualmente cursando (Grado: 8-A)</em>
+            </div>
+            <div class="info-block">
+                <strong>Carrera Técnica en Programación</strong><br>
+                <em>Educación Media Superior</em>
+                <p>Aprendizaje de fundamentos de programación y ciclo de vida del desarrollo de software.</p>
+            </div>
+            <p><em>* Me mantengo en constante actualización de forma autónoma con nuevas tecnologías y tendencias del sector.</em></p>
+        </section>
+
+        <section>
+            <h3><i class="fa-solid fa-gears"></i> Tecnologías</h3>
+            <div class="badges">
+                <span class="badge">Web Development</span>
+                <span class="badge">Adaptabilidad</span>
+                <span class="badge">QA Testing</span>
+                <span class="badge">Software Management</span>
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

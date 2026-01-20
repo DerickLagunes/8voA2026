@@ -10,7 +10,6 @@ def onePage(request):
 def derick(request):
     print("")
     return render(request, 'core/derick.html')
-
 def astrid(request):
     return render(request, 'core/astrid.html')
 def cristian (request):
@@ -21,3 +20,7 @@ def viri(request):
 
 def orlando(request):
     return render(request, 'core/orlando.html')
+def johanna(request):
+    print("Soy Johanna")
+    return render(request, "core/johanna.html")
+
