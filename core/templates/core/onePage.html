@@ -2,34 +2,30 @@
 {% load static %}
 
 {% block body %}
+
     <div class="col">
         <div class="row justify-text-center">
-            <h1>Bienvenido a mi onePage</h1>
-            <h1>X</h1><br><h1>X</h1><br><h1>X</h1><br>
+            <h1> Bienvenido a mi onePage </h1>
             <div class="col-10" id="contenido">
 
             </div>
         </div>
     </div>
 
-    <script>
-        //1) una función que genere un contenido en el DOM
-        var i = 0;
-        function loadText(){
-            var mensaje = document.createElement("p");
-            var div = document.getElementById("contenido");
-            mensaje.innerHTML = "Hola k ace" + i;
-            i ++;
-            div.appendChild(mensaje);
+<script>
+    //1) Una funcion que genere un contenido en el DOM
+    function loadText(){
+        var mensaje = document.createElement("p");
+        var div= document.getElementById("contenido");
+        mensaje.innerHTML = "Hola k ace";
+        div.appendChild(mensaje);
+    }
+
+    //2) Un eventListener para captar el scroll
+    window.addEventListener('scroll',() =>{
+        if((window.innerHeight + window.scrollY) >= document.body.offsetHeight){
+            loadText();
         }
-
-
-        //2) un EventListener para captar el scroll
-        window.addEventListener('scroll', () => {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { 
-                loadText();
-            }
-        });
-
-    </script>
+    });
+</script>
 {% endblock %}

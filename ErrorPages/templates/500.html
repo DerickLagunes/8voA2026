@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Error 500
+{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin: 20px auto;
+    }
+</style>
+<div>
+    <h1 style="color: red;font-size: 50px;"  >ERROR 500</h1>
+
+    <img alt="Hamburguesa triste" width="600" src="https://i.ibb.co/yJzdwgT/Gemini-Generated-Image-dfa8kfdfa8kfdfa8-removebg-preview.png" />
+
+    <h2 style="font-size: 60px;margin-bottom: 0">Oh! oh! No puede ser!</h2>
+    <p style="color: black; font-size: 20px;">La hamburguesa tiro el servidor no la presiones que le da ansiedad</p>
+
+    <a href="/">
+        <button style="padding: 10px 20px; cursor: pointer; background-color: orange;">Reportar problema ☎️</button>
+    </a>
+</div>
+
+{% endblock %}
