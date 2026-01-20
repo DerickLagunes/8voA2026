@@ -8,4 +8,5 @@ def onePage(request):
     return render(request, 'core/onePage.html')
 
 def derick(request):
+    print("")
     return render(request, 'core/derick.html')
