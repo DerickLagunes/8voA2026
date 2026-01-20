@@ -1,0 +1,587 @@
+<!-- Poner como un tipo CV de nosotros-->
+<!-- 
+    Nombre completo
+    Grado y Grupo
+    Carrera
+    Imagen (no de nosotros, tiene que ser un avatar)
+    descripci+ón
+    objetivo profedsional
+    Formacion general
+    idiomas
+    certificaciones
+    habilidades
+    (NO SUBIR NI NUMERO DE TELEFONO NI CORREO)
+
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orlando - Portafolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .contenedor-principal {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        /* Barra Lateral */
+        .barra-lateral {
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a0a0a 100%);
+            padding: 2rem 1.5rem;
+            border-right: 1px solid #1f1f1f;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .perfil-contenedor {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 2px solid #dc2626;
+            margin-bottom: 1rem;
+        }
+
+        .nombre {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .carrera {
+            font-size: 0.75rem;
+            color: #dc2626;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .grado {
+            font-size: 0.75rem;
+            color: #525252;
+        }
+
+        /* Menu Lateral */
+        .menu-lateral {
+            list-style: none;
+        }
+
+        .menu-item {
+            padding: 0.7rem 1rem;
+            margin-bottom: 0.3rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: #a3a3a3;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .menu-item:hover {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .menu-item.activo {
+            background: #dc2626;
+            color: #ffffff;
+        }
+
+        .menu-icono {
+            width: 16px;
+            height: 16px;
+            border: 1px solid currentColor;
+            border-radius: 3px;
+        }
+
+        /* Idiomas en sidebar */
+        .idiomas-lateral {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        .titulo-lateral {
+            font-size: 0.65rem;
+            color: #525252;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.8rem;
+        }
+
+        .idioma-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            padding: 0.4rem 0;
+        }
+
+        .idioma-nombre {
+            color: #a3a3a3;
+        }
+
+        .idioma-nivel {
+            color: #dc2626;
+        }
+
+        /* Contenido Principal */
+        .contenido-principal {
+            padding: 2.5rem 3rem;
+            background: #000000;
+        }
+
+        .seccion {
+            margin-bottom: 2.5rem;
+        }
+
+        .titulo-seccion {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #dc2626;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .titulo-seccion::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #1f1f1f;
+        }
+
+        .texto {
+            color: #737373;
+            line-height: 1.7;
+            font-size: 0.85rem;
+            max-width: 600px;
+        }
+
+        /* Grid de tarjetas */
+        .grid-tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .tarjeta {
+            background: #0a0a0a;
+            border: 1px solid #1f1f1f;
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: all 0.2s ease;
+        }
+
+        .tarjeta:hover {
+            border-color: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        .tarjeta-titulo {
+            font-size: 0.85rem;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .tarjeta-subtitulo {
+            font-size: 0.7rem;
+            color: #525252;
+        }
+
+        .tarjeta-icono {
+            width: 32px;
+            height: 32px;
+            background: #dc2626;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Habilidades */
+        .habilidades-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem 2rem;
+        }
+
+        .habilidad-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .habilidad-porcentaje {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #dc2626;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #dc2626;
+            flex-shrink: 0;
+        }
+
+        .habilidad-info {
+            flex: 1;
+        }
+
+        .habilidad-nombre {
+            font-size: 0.85rem;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        .habilidad-barra {
+            height: 3px;
+            background: #1f1f1f;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .habilidad-progreso {
+            height: 100%;
+            background: #dc2626;
+            border-radius: 2px;
+        }
+
+        /* Tags */
+        .tags-contenedor {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .tag {
+            background: transparent;
+            color: #a3a3a3;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            border: 1px solid #2a2a2a;
+            transition: all 0.2s ease;
+        }
+
+        .tag:hover {
+            border-color: #dc2626;
+            color: #dc2626;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contenedor-principal {
+                grid-template-columns: 1fr;
+            }
+
+            .barra-lateral {
+                position: relative;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #1f1f1f;
+            }
+
+            .contenido-principal {
+                padding: 1.5rem;
+            }
+
+            .grid-tarjetas,
+            .habilidades-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor-principal">
+        
+        <aside class="barra-lateral">
+            <div class="perfil-contenedor">
+                <img src="https://wallpapers.com/images/hd/xbox-360-profile-pictures-glvjkc137tsrudsw.jpg" alt="Avatar" class="avatar">
+                <h1 class="nombre">Orlando Ruiz Santos</h1>
+                <p class="carrera">Desarrollo de Software</p>
+                <p class="grado">8° A</p>
+            </div>
+
+            <ul class="menu-lateral">
+                <li class="menu-item activo">
+                    <div class="menu-icono"></div>
+                    Sobre Mi
+                </li>
+                <li class="menu-item">
+                    <div class="menu-icono"></div>
+                    Objetivo
+                </li>
+                <li class="menu-item">
+                    <div class="menu-icono"></div>
+                    Formacion
+                </li>
+                <li class="menu-item">
+                    <div class="menu-icono"></div>
+                    Certificaciones
+                </li>
+                <li class="menu-item">
+                    <div class="menu-icono"></div>
+                    Habilidades
+                </li>
+            </ul>
+
+            <div class="idiomas-lateral">
+                <h3 class="titulo-lateral">Idiomas</h3>
+                <div class="idioma-item">
+                    <span class="idioma-nombre">Español</span>
+                    <span class="idioma-nivel">Nativo</span>
+                </div>
+                <div class="idioma-item">
+                    <span class="idioma-nombre">Ingles</span>
+                    <span class="idioma-nivel">A2</span>
+                </div>
+            </div>
+        </aside>
+
+        <main class="contenido-principal">
+            
+            <section class="seccion">
+                <h2 class="titulo-seccion">Sobre Mi</h2>
+                <p class="texto">
+                    Estudiante de Desarrollo de Software Multiplataforma,
+                    responsable y dedicado, con pasión por la tecnología y el
+                    aprendizaje continuo. Enfocado en crear soluciones
+                    eficientes y de calidad, siempre con ganas de aprender y
+                    mejorar mis habilidades en el ámbito tecnológico.
+                </p>
+            </section>
+
+            <section class="seccion">
+                <h2 class="titulo-seccion">Objetivo Profesional</h2>
+                <p class="texto">
+                    Desarrollarme como profesional en el area de desarrollo de software, aplicando mis conocimientos 
+                    en proyectos reales que generen impacto positivo. Busco integrarme a equipos de trabajo donde 
+                    pueda aportar mis habilidades tecnicas y continuar aprendiendo.
+                </p>
+            </section>
+
+            <section class="seccion">
+                <h2 class="titulo-seccion">Formacion Academica</h2>
+                <div class="grid-tarjetas">
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">U</div>
+                        <h3 class="tarjeta-titulo">Ing. Desarrollo de Software</h3>
+                        <p class="tarjeta-subtitulo">Universidad Tecnologica Emiliano Zapata UTEZ | 2022 - Presente</p>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">B</div>
+                        <h3 class="tarjeta-titulo">Bachillerato Tecnologico</h3>
+                        <p class="tarjeta-subtitulo">CBTis 166 | 2020 - 2023</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion">
+                <h2 class="titulo-seccion">Certificaciones</h2>
+                <div class="grid-tarjetas">
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">J</div>
+                        <h3 class="tarjeta-titulo">Java Foundations</h3>
+                        <p class="tarjeta-subtitulo">Oracle Academy | 2024</p>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">F</div>
+                        <h3 class="tarjeta-titulo">Fundamentos de Ciberseguridad</h3>
+                        <p class="tarjeta-subtitulo">Coursera | 2024</p>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">D</div>
+                        <h3 class="tarjeta-titulo">Database Foundations</h3>
+                        <p class="tarjeta-subtitulo">Oracle Academy | 2024</p>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">I</div>
+                        <h3 class="tarjeta-titulo">IT Essentials</h3>
+                        <p class="tarjeta-subtitulo">Cisco | 2024</p>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">C</div>
+                        <h3 class="tarjeta-titulo">CCNA: Switching, Routing, and Wireless Essentials</h3>
+                        <p class="tarjeta-subtitulo">Cisco | 2024</p>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">L</div>
+                        <h3 class="tarjeta-titulo">Linux Essentials</h3>
+                        <p class="tarjeta-subtitulo">Cisco | 2025</p>
+                    </div>
+                    <div class="tarjeta">
+                        <div class="tarjeta-icono">I</div>
+                        <h3 class="tarjeta-titulo">Introduction to Cybersecurity</h3>
+                        <p class="tarjeta-subtitulo">Cisco | 2025</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion">
+                <h2 class="titulo-seccion">Habilidades Tecnicas</h2>
+                <div class="habilidades-grid">
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">80%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">HTML / CSS</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">70%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">JavaScript</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">70%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">SQL / Bases de Datos</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">80%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">GitHub</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">85%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">Spring Boot</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">80%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">React</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">20%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">Python</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 20%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="habilidad-item">
+                        <div class="habilidad-porcentaje">10%</div>
+                        <div class="habilidad-info">
+                            <p class="habilidad-nombre">Django</p>
+                            <div class="habilidad-barra">
+                                <div class="habilidad-progreso" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion">
+                <h2 class="titulo-seccion">Habilidades Blandas</h2>
+                <div class="tags-contenedor">
+                    <span class="tag">Trabajo en equipo</span>
+                    <span class="tag">Resolucion de problemas</span>
+                    <span class="tag">Comunicacion efectiva</span>
+                    <span class="tag">Aprendizaje rapido</span>
+                    <span class="tag">Organizacion</span>
+                    <span class="tag">Creatividad</span>
+                    <span class="tag">Adaptabilidad</span>
+                    <span class="tag">Proactividad</span>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        const menuItems = document.querySelectorAll('.menu-item');
+        const secciones = [
+            { titulo: 'Sobre Mi', selector: 'Sobre Mi' },
+            { titulo: 'Objetivo', selector: 'Objetivo Profesional' },
+            { titulo: 'Formacion', selector: 'Formacion Academica' },
+            { titulo: 'Certificaciones', selector: 'Certificaciones' },
+            { titulo: 'Habilidades', selector: 'Habilidades Tecnicas' }
+        ];
+
+        menuItems.forEach((item, index) => {
+            item.addEventListener('click', function() {
+                // Remover clase activo de todos los items
+                menuItems.forEach(menuItem => {
+                    menuItem.classList.remove('activo');
+                });
+                
+                // Agregar clase activo al item clickeado
+                this.classList.add('activo');
+                
+                // Buscar la sección correspondiente
+                const secciones = document.querySelectorAll('.titulo-seccion');
+                const textoBuscado = secciones[index]?.textContent.trim();
+                
+                // Scroll suave a la sección
+                if (secciones[index]) {
+                    secciones[index].scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
