@@ -7,4 +7,7 @@ urlpatterns = [
     path('onePage/', core.onePage, name='onePage'),
     path('derick/', core.derick, name='derick'),
     path('astrid/', core.astrid, name='astrid'),
+    path('cristian/', core.cristian, name='cristian'),
+    path('viri/', core.viri, name='viri'),
+    path('orlando/', core.orlando, name='orlando'),
 ]
