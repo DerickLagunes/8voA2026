@@ -16,3 +16,6 @@ def cristian (request):
 
 def viri(request):
     return render(request, 'core/viri.html')
+
+def orlando(request):
+    return render(request, 'core/orlando.html')

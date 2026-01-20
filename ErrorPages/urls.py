@@ -8,4 +8,5 @@ urlpatterns = [
     path('derick/', core.derick, name='derick'),
     path('cristian/', core.cristian, name='cristian'),
     path('viri/', core.viri, name='viri'),
+    path('orlando/', core.orlando, name='orlando'),
 ]
