@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Viridiana Portilla Palestina - CV</title>
+	<style>
+		:root {
+			--bg: #f7f7f8;
+			--card: #ffffff;
+			--text: #1f2937;
+			--muted: #6b7280;
+			--border: #e5e7eb;
+		}
+		* { box-sizing: border-box; }
+		body {
+			margin: 0;
+			font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial;
+			background: var(--bg);
+			color: var(--text);
+		}
+		.cv {
+			max-width: 920px;
+			margin: 40px auto;
+			padding: 28px;
+			background: var(--card);
+			border-radius: 16px;
+			border: 1px solid var(--border);
+			box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+		}
+		.header {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			padding-bottom: 18px;
+			border-bottom: 1px solid var(--border);
+		}
+		.avatar {
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			object-fit: cover;
+			border: 2px solid var(--border);
+			background: #ddd;
+		}
+		h1 { margin: 0; font-size: 28px; }
+		.tagline {
+			margin-top: 6px;
+			color: var(--muted);
+			font-size: 14px;
+		}
+		section { margin-top: 24px; }
+		h2 {
+			font-size: 15px;
+			text-transform: uppercase;
+			color: var(--muted);
+			margin-bottom: 10px;
+			letter-spacing: .5px;
+		}
+		p { line-height: 1.6; margin: 0; }
+		ul { list-style: none; padding: 0; margin: 0; }
+		.list li {
+			padding: 12px;
+			border: 1px solid var(--border);
+			border-radius: 12px;
+			margin-bottom: 10px;
+		}
+		.item-title { font-weight: 600; }
+		.meta { color: var(--muted); font-size: 13px; }
+	
+		.skills {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+			gap: 8px;
+		}
+		.skills li {
+			padding: 8px 10px;
+			border: 1px dashed var(--border);
+			border-radius: 10px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+<body>
+
+<main class="cv">
+
+	<header class="header">
+		<img class="avatar" src="https://i.imgur.com/j5q9lmG.png" alt="Foto de Viridiana">
+		<div>
+			<h1>Viridiana Portilla Palestina</h1>
+			<p class="tagline">
+				Ingeniería en Desarrollo y Gestión de Software · UTEZ
+			</p>
+		</div>
+	</header>
+
+	<section>
+		<h2>Objetivo profesional</h2>
+		<p>
+			Desarrolladora de software en formación con experiencia en proyectos académicos,
+			estadías profesionales y desarrollo backend. Busco integrarme a un equipo donde
+			pueda aplicar mis conocimientos en Java, Spring Boot y tecnologías web,
+			aportando soluciones funcionales y continuando mi crecimiento profesional.
+		</p>
+	</section>
+
+	<section>
+		<h2>Formación académica</h2>
+		<ul class="list">
+			<li>
+				<span class="item-title">Ingeniería en Desarrollo y Gestión de Software</span><br>
+				<span class="meta">Universidad Tecnológica Emiliano Zapata · En curso</span>
+			</li>
+			<li>
+				<span class="item-title">TSU en Desarrollo de Software Multiplataforma</span><br>
+				<span class="meta">Universidad Tecnológica Emiliano Zapata · Titulada</span>
+			</li>
+			<li>
+				<span class="item-title">Técnico en Programación</span><br>
+				<span class="meta">CECyTE Emiliano Zapata · 2020 – 2023</span>
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Experiencia y proyectos</h2>
+		<ul class="list">
+			<li>
+				<span class="item-title">Instructora de Tecnolochicas</span>
+				<span class="meta"> · Grupo Televisa (Septiembre 2024 – Actualidad)</span>
+				<p>
+					Impartición de talleres a jóvenes interesadas en tecnología,
+					enseñando conceptos básicos de programación y fomentando la participación
+					de mujeres en el área tecnológica.
+				</p>
+			</li>
+
+			<li>
+				<span class="item-title">Sistema de Evaluación para Cursos de Inducción</span>
+				<span class="meta"> · Proyecto de Estadías (Mayo – Agosto 2025)</span>
+				<p>
+					Desarrollo de un sistema para evaluar cursos de inducción,
+					gestionando usuarios, evaluaciones y resultados,
+					aplicando buenas prácticas de desarrollo y metodologías ágiles.
+				</p>
+			</li>
+
+			<li>
+				<span class="item-title">Desarrollo de eCommerce con Java Servlets y MySQL</span>
+				<span class="meta"> · Proyecto escolar</span>
+				<p>
+					Implementación del backend utilizando Java Servlets y MySQL,
+					manejando lógica de negocio y persistencia de datos.
+				</p>
+			</li>
+
+			<li>
+				<span class="item-title">Sistema de Gestión de Ventas con Spring Boot y JavaScript</span>
+				<span class="meta"> · Proyecto escolar</span>
+				<p>
+					Desarrollo de parte del backend con Spring Boot y consumo de la API
+					desde el frontend utilizando JavaScript.
+				</p>
+			</li>
+
+			<li>
+				<span class="item-title">Aplicación Web y Móvil para Gestión de Eventos</span>
+				<span class="meta"> · Proyecto en desarrollo</span>
+				<p>
+					Desarrollo de la aplicación móvil con React Native y colaboración
+					en el backend con Spring Boot.
+				</p>
+			</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Idiomas</h2>
+		<ul class="tags">
+			<li class="tag">Español · Nativo</li>
+			<li class="tag">Inglés · Básico</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Habilidades blandas</h2>
+		<ul class="skills">
+			<li>Trabajo en equipo y comunicación efectiva</li>
+			<li>Resolución de problemas y pensamiento crítico</li>
+			<li>Adaptabilidad y aprendizaje rápido</li>
+			<li>Organización y gestión del tiempo</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Habilidades técnicas</h2>
+		<ul class="skills">
+			<li>Desarrollo backend con Java y Spring Boot</li>
+			<li>JavaScript, React y Node.js</li>
+			<li>MySQL y MongoDB</li>
+			<li>Git y GitHub</li>
+			<li>Metodologías ágiles (Scrum)</li>
+		</ul>
+	</section>
+
+</main>
+
+</body>
+</html>
