@@ -12,8 +12,7 @@ urlpatterns = [
     path('viri/', core.viri, name='viri'),
     path('orlando/', core.orlando, name='orlando'),
     path('johanna/', core.johanna,name='johanna'),
+    path('erick/', core.erick,name='erick'),
     path('ander/', core.ander, name='ander'),
-
-
     path('sebas/', core.sebas, name='sebas')    
 ]

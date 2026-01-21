@@ -27,6 +27,8 @@ def orlando(request):
 def johanna(request):
     print("Soy Johanna")
     return render(request, "core/johanna.html")
+def erick(request):
+    return render(request, 'core/erick.html')
 
 def ander(request):
     print("Soy Ander")
