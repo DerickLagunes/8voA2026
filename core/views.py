@@ -20,7 +20,11 @@ def viri(request):
 
 def orlando(request):
     return render(request, 'core/orlando.html')
+
 def johanna(request):
     print("Soy Johanna")
     return render(request, "core/johanna.html")
+
+def sebas(request):
+    return render(request, "core/sebas.html")
 
