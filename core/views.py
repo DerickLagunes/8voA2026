@@ -31,3 +31,6 @@ def ander(request):
 def sebas(request):
     return render(request, "core/sebas.html")
 
+def rocio(request):
+    return render(request, 'core/rocio.html')
+
