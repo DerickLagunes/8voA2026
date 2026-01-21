@@ -51,3 +51,6 @@ def uxue(request):
 
 def onePage(request):
     return render(request, 'core/angel.html')
+    
+def abril(request):
+    return render(request, 'core/abril.html')
