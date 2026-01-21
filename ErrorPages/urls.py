@@ -19,4 +19,5 @@ urlpatterns = [
     path('alexa/',core.alexa,name='alexa'),
     path('sebas/', core.sebas, name='sebas'), 
     path('elias/', core.elias, name='elias'),  
+    path('emiliano/', core.emiliano, name='emiliano'),  
 ]

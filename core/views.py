@@ -43,3 +43,5 @@ def rocio(request):
 
 def alexa(request):
     return render(request, 'core/alexa.html')
+def emiliano(request):
+    return render(request, 'core/emiliano.html')
