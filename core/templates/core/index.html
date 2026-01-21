@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block contenido%}
+
+<h1>Bienvenido a la página core de 8B</h1>
+<img
+  src="{% static 'img/404-error.png' %}"
+  alt="Error 404"
+  style="max-width: 400px; margin-bottom: 20px; border-radius: 10%"
+/>
+<a href="{% url 'nuevo' %}"> Da clic aqui </a> 
+
+{% endblock %}

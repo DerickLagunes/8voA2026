@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <div class="col">
+        <div class="row justify-text-center">
+            <h1>Bienvenido a mi OnePage</h1>
+            <div class="col-10" id="contenido">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //1) una función que genere un en el DOM
+
+        function loadText(){
+            var mensaje = document.createElement("p");
+            var div = document.getElementById("contenido");
+            mensaje.innerHTML = "Hola k ace";
+            div.appendChild(mensaje);
+        }
+
+
+        //2) un EventListener para caotar el scroll
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight){
+                loadText();
+            }
+        });
+
+    
+    </script>
+
+{% endblock %}
