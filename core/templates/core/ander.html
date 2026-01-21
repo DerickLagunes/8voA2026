@@ -7,237 +7,177 @@
     <title>CV - Gaspar Andres Garcia Quiroz</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        /* Fuente opcional 'Inter' para un look más tech */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-
         body {
             font-family: 'Inter', sans-serif;
             background-color: #09090b;
-            /* zinc-950 */
+            color: #d4d4d8;
         }
 
-        /* Utilidades para el efecto Glassy */
-        .glass-panel {
-            background: rgba(24, 24, 27, 0.6);
-            /* zinc-900 con opacidad */
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        .bento-card {
+            background-color: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
+        .bento-card:hover {
+            border-color: #3f3f46;
         }
 
-        .glass-card:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #10b981;
         }
 
-        /* Orbes de fondo para dar profundidad al cristal */
-        .ambient-light-1 {
-            position: absolute;
-            top: -10%;
-            left: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, rgba(63, 63, 70, 0.3) 0%, rgba(0, 0, 0, 0) 70%);
-            border-radius: 50%;
-            z-index: -1;
-        }
-
-        .ambient-light-2 {
-            position: absolute;
-            bottom: -10%;
-            right: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, rgba(39, 39, 42, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
-            border-radius: 50%;
-            z-index: -1;
+        .toggle-checkbox:checked+.toggle-label {
+            background-color: #10b981;
         }
     </style>
 </head>
 
-<body class="text-zinc-300 min-h-screen flex items-center justify-center py-12 px-4 relative overflow-x-hidden">
+<body class="min-h-screen p-4 md:p-8 flex justify-center items-start">
 
-    <div class="ambient-light-1"></div>
-    <div class="ambient-light-2"></div>
+    <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-4 gap-4">
 
-    <div class="glass-panel w-full max-w-6xl rounded-3xl overflow-hidden flex flex-col md:flex-row relative z-10">
-
-        <aside
-            class="w-full md:w-80 lg:w-96 border-b md:border-b-0 md:border-r border-white/5 p-8 flex flex-col gap-8 bg-zinc-900/40">
-
-            <div class="text-center md:text-left">
-                <div
-                    class="w-32 h-32 rounded-2xl overflow-hidden border border-white/10 shadow-xl mx-auto md:mx-0 mb-6 relative group">
-                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent opacity-40"></div>
-                    <img src="https://i.pinimg.com/736x/61/03/5c/61035cabd83d4ce5da18800ff3dee7ba.jpg" alt="Avatar"
-                        class="w-full h-full object-cover">
-                </div>
-
-                <h1 class="text-3xl font-bold text-white tracking-tight mb-2">GASPAR <br>ANDRES</h1>
-                <p class="text-zinc-400 text-sm font-light tracking-wide uppercase">Software Developer</p>
+        <div class="bento-card md:col-span-2 flex-row items-center gap-6">
+            <div class="w-24 h-24 shrink-0 rounded-xl overflow-hidden border border-zinc-700">
+                <img src="https://i.pinimg.com/736x/61/03/5c/61035cabd83d4ce5da18800ff3dee7ba.jpg" alt="Avatar"
+                    class="w-full h-full object-cover">
             </div>
-
-            <hr class="border-white/10">
-
-            <div class="space-y-4">
-                <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">Contacto</h3>
-
-                <div class="flex items-center gap-4 group">
-                    <div
-                        class="w-8 h-8 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-white/5 text-zinc-400 group-hover:text-white group-hover:border-white/20 transition-all">
-                        <i class="fas fa-map-marker-alt text-xs"></i>
-                    </div>
-                    <span class="text-sm font-light">Cuernavaca, MX</span>
-                </div>
-
-                <div class="flex items-center gap-4 group">
-                    <div
-                        class="w-8 h-8 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-white/5 text-zinc-400 group-hover:text-white group-hover:border-white/20 transition-all">
-                        <i class="fab fa-linkedin-in text-xs"></i>
-                    </div>
-                    <a href="https://www.linkedin.com/in/ander-tsx/" target="_blank"
-                        class="text-sm font-light hover:text-white transition-colors">/in/ander-tsx</a>
-                </div>
-
-                <div class="flex items-center gap-4 group opacity-50 cursor-not-allowed" title="Información privada">
-                    <div
-                        class="w-8 h-8 rounded-lg bg-zinc-800/50 flex items-center justify-center border border-white/5">
-                        <i class="fas fa-envelope text-xs"></i>
-                    </div>
-                    <span class="text-sm font-light">Privado</span>
-                </div>
-            </div>
-
             <div>
-                <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">Stack</h3>
+                <h1 class="text-2xl font-bold text-white tracking-tight">GASPAR ANDRES</h1>
+                <p class="text-zinc-500 font-medium text-sm uppercase tracking-wider">Software Developer</p>
+                <div class="mt-3 flex gap-2">
+                    <span class="px-2 py-1 bg-zinc-800 rounded text-xs text-zinc-400 border border-zinc-700">8-A</span>
+                    <span class="px-2 py-1 bg-zinc-800 rounded text-xs text-zinc-400 border border-zinc-700">MX</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bento-card justify-center gap-3 md:col-span-1">
+            <div class="flex items-center gap-3 text-sm hover:text-white transition-colors">
+                <i class="fab fa-linkedin text-zinc-500"></i>
+                <a href="https://www.linkedin.com/in/ander-tsx/" target="_blank">/in/ander-tsx</a>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-zinc-500">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Cuernavaca</span>
+            </div>
+            <div class="flex items-center gap-3 text-sm text-zinc-600 cursor-not-allowed">
+                <i class="fas fa-envelope"></i>
+                <span>Privado</span>
+            </div>
+        </div>
+
+        <div
+            class="bento-card md:col-span-1 flex flex-col justify-center items-center bg-zinc-900/50 border-dashed border-zinc-700 relative">
+            <label class="text-2xl font-bold text-zinc-500 uppercase tracking-widest mb-2">◉_◉</label>
+
+            <button id="web-switch"
+                class="group relative inline-flex h-8 w-16 items-center rounded-full bg-zinc-800 transition-colors focus:outline-none hover:bg-zinc-700 border border-zinc-600">
+                <span class="sr-only">Ir a ander.icu</span>
+                <span
+                    class="translate-x-1 inline-block h-6 w-6 transform rounded-full bg-zinc-400 transition group-hover:bg-white group-active:translate-x-9 group-active:bg-emerald-400"></span>
+            </button>
+            <p class="text-xl text-zinc-600 mt-2 text-center">Dame click</p>
+        </div>
+
+        <div class="bento-card md:col-span-2">
+            <h3 class="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-2">Perfil</h3>
+            <p class="text-sm leading-relaxed text-zinc-400">
+                Soy <strong class="text-white">Ander</strong>, enfocado en soluciones limpias. Transformo requerimientos
+                complejos en software intuitivo, especializándome en arquitecturas multiplataforma y gestión
+                optimizada
+                de datos.
+            </p>
+        </div>
+
+        <div class="bento-card md:col-span-2 grid grid-cols-2 gap-4">
+            <div>
+                <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-2">Idiomas</h3>
+                <div class="space-y-2">
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span>Español</span> <span
+                                class="text-zinc-500">Nativo</span></div>
+                        <div class="h-1 w-full bg-zinc-800 rounded-full">
+                            <div class="h-1 bg-zinc-500 rounded-full w-full"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-1"><span>Ruso</span> <span
+                                class="text-zinc-500">Z1</span></div>
+                        <div class="h-1 w-full bg-zinc-800 rounded-full">
+                            <div class="h-1 bg-zinc-500 rounded-full w-[90%]"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-2">Stack</h3>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 rounded-md text-xs bg-zinc-800/50 border border-white/5 text-zinc-300">Varias
-                        cosas</span>
+                    <span class="px-2 py-1 bg-zinc-800 border border-zinc-700 rounded text-xs">TypeScript</span>
+                    <span class="px-2 py-1 bg-zinc-800 border border-zinc-700 rounded text-xs">SQL</span>
+                    <span class="px-2 py-1 bg-zinc-800 border border-zinc-700 rounded text-xs">Multiplataforma</span>
                 </div>
             </div>
+        </div>
 
+        <div class="bento-card md:col-span-2">
+            <h3 class="text-sm font-bold text-zinc-500 uppercase tracking-widest mb-4">Formación</h3>
+            <div class="space-y-4">
+                <div class="border-l-2 border-zinc-800 pl-4">
+                    <h4 class="text-white font-semibold text-sm">Ingeniería Desarrollo Software</h4>
+                    <p class="text-xs text-zinc-500">Universidad Tecnológica · 2023 - Presente</p>
+                </div>
+                <div class="border-l-2 border-zinc-800 pl-4">
+                    <h4 class="text-white font-semibold text-sm">Diplomado Automatización</h4>
+                    <p class="text-xs text-zinc-500">UAEM · 2022 - 2023</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bento-card md:col-span-1 justify-between">
+            <i class="fas fa-gamepad text-2xl text-zinc-600 mb-2"></i>
             <div>
-                <h3 class="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-4">Idiomas</h3>
-                <div class="space-y-3">
-                    <div class="flex justify-between text-sm">
-                        <span>Español</span>
-                        <span class="text-zinc-500">Nativo</span>
-                    </div>
-                    <div class="w-full bg-zinc-800/50 rounded-full h-1">
-                        <div class="bg-zinc-500 h-1 rounded-full" style="width: 100%"></div>
-                    </div>
-
-                    <div class="flex justify-between text-sm mt-4">
-                        <span>Ruso</span>
-                        <span class="text-zinc-500">Alto (Z1)</span>
-                    </div>
-                    <div class="w-full bg-zinc-800/50 rounded-full h-1">
-                        <div class="bg-zinc-500 h-1 rounded-full" style="width: 90%"></div>
-                    </div>
-                </div>
+                <h5 class="text-white font-bold text-sm">Top 3% R6 Siege</h5>
+                <p class="text-xs text-zinc-500">Competitivo</p>
             </div>
-        </aside>
+        </div>
 
-        <main class="flex-1 p-8 md:p-12 overflow-y-auto">
-
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <p class="text-xl text-zinc-500 font-light">Ing. Desarrollo de Software Multiplataforma</p>
-                </div>
-                <div class="hidden md:block">
-                    <span
-                        class="glass-card px-4 py-2 rounded-full text-xs font-bold text-zinc-300 uppercase tracking-widest border border-white/10">
-                        8-A
-                    </span>
-                </div>
+        <div class="bento-card md:col-span-1 justify-between">
+            <i class="fas fa-coffee text-2xl text-zinc-600 mb-2"></i>
+            <div>
+                <h5 class="text-white font-bold text-sm">Desempleado</h5>
+                <p class="text-xs text-zinc-500">Status Actual</p>
             </div>
+        </div>
 
-            <div class="grid gap-12">
-
-                <section>
-                    <div class="flex items-center gap-4 mb-6">
-                        <span class="w-8 h-[1px] bg-zinc-500"></span>
-                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">Perfil</h3>
-                    </div>
-                    <p class="text-zinc-400 leading-relaxed text-lg font-light">
-                        Soy <span class="text-white font-normal">Ander</span>, un desarrollador enfocado en
-                        soluciones limpias y eficientes. Mi objetivo es transformar requerimientos complejos en software
-                        intuitivo, especializándome en arquitecturas multiplataforma y gestión optimizada de datos.
-                    </p>
-                </section>
-
-                <section>
-                    <div class="flex items-center gap-4 mb-8">
-                        <span class="w-8 h-[1px] bg-zinc-500"></span>
-                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">Formación</h3>
-                    </div>
-
-                    <div class="relative pl-8 border-l border-zinc-800 space-y-10">
-                        <div class="relative">
-                            <span
-                                class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-zinc-900 border-2 border-zinc-600"></span>
-                            <h4 class="text-xl font-bold text-white">Ingeniería en Desarrollo de Software</h4>
-                            <p class="text-sm text-zinc-500 mb-2">Universidad Tecnológica · 2023 - Presente</p>
-                            <p class="text-zinc-400 text-sm leading-relaxed">
-                                Formación integral en desarrollo backend, frontend y administración de bases de datos.
-                                Participación activa en proyectos de integración tecnológica.
-                            </p>
-                        </div>
-
-                        <div class="relative">
-                            <span
-                                class="absolute -left-[37px] top-1 w-4 h-4 rounded-full bg-zinc-900 border-2 border-zinc-600"></span>
-                            <h4 class="text-xl font-bold text-white">Diplomado en Automatización y Mecatronica</h4>
-                            <p class="text-sm text-zinc-500 mb-2">UAEM · 2022 - 2023</p>
-                            <p class="text-zinc-400 text-sm leading-relaxed">
-                                Especialidad técnica en programación y soporte de sistemas computacionales.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section>
-                    <div class="flex items-center gap-4 mb-8">
-                        <span class="w-8 h-[1px] bg-zinc-500"></span>
-                        <h3 class="text-lg font-bold text-white uppercase tracking-wider">Certificaciones</h3>
-                    </div>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="glass-card p-6 rounded-xl flex flex-col justify-between h-32">
-                            <div>
-                                <h5 class="text-white font-semibold mb-1">Top 3% Rainbow Six Siege</h5>
-                                <p class="text-xs text-zinc-500 uppercase">Videojuego Competitivo</p>
-                            </div>
-                            <div class="self-end text-zinc-600">
-                                <i class="fas fa-database text-2xl opacity-50"></i>
-                            </div>
-                        </div>
-
-                        <div class="glass-card p-6 rounded-xl flex flex-col justify-between h-32">
-                            <div>
-                                <h5 class="text-white font-semibold mb-1">Desempleado</h5>
-                                <p class="text-xs text-zinc-500 uppercase">20 años sin empleo</p>
-                            </div>
-                            <div class="self-end text-zinc-600">
-                                <i class="fas fa-code text-2xl opacity-50"></i>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
-        </main>
     </div>
 
+    <script>
+        const switchBtn = document.getElementById('web-switch');
+
+        switchBtn.addEventListener('click', () => {
+            const circle = switchBtn.querySelector('span:nth-child(2)');
+            circle.classList.add('translate-x-9', 'bg-emerald-400');
+
+            setTimeout(() => {
+                document.body.innerHTML = `
+                    <iframe src="https://ander.icu" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; background: #000;">
+                        SI ves esto, te trono cawn
+                    </iframe>
+                `;
+                document.body.style.margin = '0';
+                document.body.style.margin = '0';
+                document.body.style.overflow = 'hidden';
+            }, 30);
+        });
+    </script>
 </body>
 
 </html>
