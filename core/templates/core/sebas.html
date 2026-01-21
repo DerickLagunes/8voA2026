@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Angel Sebastian Jimenez Ureña</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --spidey-red: #c41e3a;
+            --spidey-blue: #1a3a6e;
+            --spidey-dark-blue: #0d1b2a;
+            --spidey-white: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--spidey-dark-blue);
+            background-image: url("https://img.freepik.com/vector-gratis/fondo-telarana-halloween-realista_23-2149090360.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+            color: var(--spidey-white);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(13, 27, 42, 0.85);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            background: var(--spidey-red);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            border: 3px solid var(--spidey-blue);
+        }
+
+        .avatar {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--spidey-white);
+        }
+
+        .header-info h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .header-info .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--spidey-dark-blue);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Secciones */
+        .section {
+            background: var(--spidey-blue);
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--spidey-red);
+        }
+
+        .section-title {
+            font-family: 'Bangers', cursive;
+            font-size: 1.5rem;
+            color: #ff4d4d;
+            margin-bottom: 15px;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+        }
+
+        .section-content {
+            line-height: 1.7;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-item {
+            background: var(--spidey-dark-blue);
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .timeline-item {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item h4 {
+            color: #ff4d4d;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-bottom: 8px;
+        }
+
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: var(--spidey-red);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .tag.secondary {
+            background: var(--spidey-dark-blue);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .footer p {
+            font-family: 'Bangers', cursive;
+            font-size: 1.3rem;
+            color: #ff4d4d;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-info h1 {
+                font-size: 1.8rem;
+            }
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://cdnb.artstation.com/p/assets/images/images/079/579/621/large/euge-morera-optimuslayne-avatar-icon-sig.jpg?1725295164" alt="Avatar" class="avatar">
+            <div class="header-info">
+                <h1>Angel Sebastian Jimenez Ureña</h1>
+                <p class="subtitle">Ingeniería en Desarrollo de Software</p>
+                <span class="badge">Grado y Grupo: 8-A</span>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="section-content">
+                <p>Estudiante de Desarrollo de Software Multiplataforma, con motivación y compromiso para crecer en el ámbito laboral. Responsable, dedicado y con ganas de superarse.
+</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Objetivo Profesional</h2>
+            <div class="section-content">
+                <p>Desarrollar mi carrera en el área de desarrollo de software, contribuyendo a proyectos innovadores. Busco integrarme a equipos donde pueda aplicar mis conocimientos y continuar creciendo profesionalmente.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Educación</h2>
+            <div class="timeline-item">
+                <h4>Ingeniería en Desarrollo de Software</h4>
+                <p class="date">Actualmente cursando - 8° Semestre, Grupo A</p>
+                <p>Formación en desarrollo de aplicaciones, bases de datos, programación orientada a objetos, desarrollo web y móvil.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Bachillerato</h4>
+                <p class="date">Completado</p>
+                <p>Educación media superior con enfoque en ciencias exactas y tecnología.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML y CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Java</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Git y GitHub</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">Trabajo en Equipo</div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <h2 class="section-title">Certificaciones y Cursos</h2>
+            <div class="tags-container">
+                <span class="tag">Desarrollo Web Frontend</span>
+                <span class="tag secondary">Desarrollo Web Backend</span>
+                <span class="tag">Base de Datos SQL</span>
+                <span class="tag secondary">Control de Versiones Git</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Experiencia y Proyectos</h2>
+            <div class="timeline-item">
+                <h4>Proyectos Académicos</h4>
+                <p class="date">Durante la carrera</p>
+                <p>Desarrollo de aplicaciones web, sistemas de gestión y aplicaciones móviles utilizando metodologías ágiles.</p>
+            </div>
+            <div class="timeline-item">
+                <h4>Proyectos Personales</h4>
+                <p class="date">Desarrollo continuo</p>
+                <p>Creación de proyectos para fortalecer habilidades técnicas y explorar nuevas tecnologías.</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>"Un gran poder conlleva una gran responsabilidad"</p>
+        </footer>
+    </div>
+</body>
+</html>

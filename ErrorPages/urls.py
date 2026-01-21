@@ -14,4 +14,5 @@ urlpatterns = [
     path('ander/', core.ander, name='ander'),
 
 
+    path('sebas/', core.sebas, name='sebas')    
 ]
