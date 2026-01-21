@@ -38,3 +38,6 @@ def sebas(request):
 
 def elias(request):
     return render(request, "core/elias.html")
+def rocio(request):
+    return render(request, 'core/rocio.html')
+
