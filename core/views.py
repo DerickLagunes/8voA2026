@@ -48,3 +48,6 @@ def emiliano(request):
 
 def uxue(request):
     return render(request, 'core/uxue.html')
+
+def onePage(request):
+    return render(request, 'core/angel.html')
