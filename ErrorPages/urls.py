@@ -12,12 +12,13 @@ urlpatterns = [
     path('viri/', core.viri, name='viri'),
     path('orlando/', core.orlando, name='orlando'),
     path('johanna/', core.johanna,name='johanna'),
+    path('sebas/', core.sebas, name='sebas')    
+    path('diego/', core.diego, name='diego'),
     path('erick/', core.erick,name='erick'),
     path('ander/', core.ander, name='ander'),
     
     path('rocio/', core.rocio, name='rocio'),
     path('alexa/',core.alexa,name='alexa'),
-    path('sebas/', core.sebas, name='sebas'), 
     path('elias/', core.elias, name='elias'),  
     path('emiliano/', core.emiliano, name='emiliano'),  
     path('uxue/', core.uxue, name='uxue'),
