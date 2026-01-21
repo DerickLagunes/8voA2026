@@ -41,3 +41,6 @@ def elias(request):
 def rocio(request):
     return render(request, 'core/rocio.html')
 
+def emiliano(request):
+    return render(request, 'core/emiliano.html')
+
