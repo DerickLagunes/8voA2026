@@ -15,6 +15,9 @@ def astrid(request):
 def cristian (request):
     return render(request, 'core/Cristian.html')
 
+def cesar(request):
+    return render(request, 'core/cesar.html')
+
 def viri(request):
     return render(request, 'core/viri.html')
 
