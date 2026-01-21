@@ -25,6 +25,9 @@ def johanna(request):
     print("Soy Johanna")
     return render(request, "core/johanna.html")
 
+def ander(request):
+    print("Soy Ander")
+    return render(request, "core/ander.html")
 def sebas(request):
     return render(request, "core/sebas.html")
 
