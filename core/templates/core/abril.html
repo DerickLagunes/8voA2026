@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #fde2e4, #f8edeb);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cv-container {
+            max-width: 950px;
+            background: #fff;
+            margin: 50px auto;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #f497b6;
+        }
+
+        h2 {
+            color: #d63384;
+            font-weight: 600;
+        }
+
+        h5 {
+            color: #b565a7;
+        }
+
+        .section-title {
+            color: #d63384;
+            border-left: 6px solid #f497b6;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .badge-skill {
+            background-color: #f497b6;
+            font-size: 0.9rem;
+            padding: 8px;
+            border-radius: 20px;
+        }
+
+        .info-text strong {
+            color: #b565a7;
+        }
+
+        .card-soft {
+            background-color: #fff0f6;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="cv-container">
+
+    <!-- ENCABEZADO -->
+    <div class="row align-items-center mb-5">
+        <div class="col-md-4 text-center">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" class="profile-img" alt="Foto">
+        </div>
+        <div class="col-md-8">
+            <h2>Abril Aidee Medina Villa</h2>
+            <h5>Desarrolladora de Software Multiplataforma 8°A</h5>
+            <p class="info-text mb-1"><strong>Email:</strong> 20233tn079@utez.edu.mx</p>
+            <p class="info-text mb-1"><strong>Teléfono:</strong> 777 589 7411</p>
+            <p class="info-text mb-0"><strong>Ubicación:</strong> Cuernavaca, Morelos</p>
+        </div>
+    </div>
+
+    <!-- PERFIL -->
+    <div class="mb-4">
+        <h4 class="section-title">Perfil Profesional</h4>
+        <div class="card-soft">
+            <p class="mb-0">Estudiante de ingeniería enfocada en el desarrollo multiplataforma con experiencia liderando proyectos académicos y creando soluciones responsables para el entorno académico y comunitario.</p>
+        </div>
+    </div>
+
+    <!-- EXPERIENCIA -->
+    <div class="mb-4">
+        <h4 class="section-title">Experiencia</h4>
+        <div class="card-soft">
+            <h6 class="fw-bold text-dark">Desarrolladora en prácticas</h6>
+            <small class="text-muted">Laboratorios UTEZ | 2024</small>
+            <p class="mb-0">Diseño de microservicios internos y automatización de reportes de investigación usando Python, Django y despliegues locales.</p>
+        </div>
+        <div class="card-soft">
+            <h6 class="fw-bold text-dark">Coordinadora de taller de software</h6>
+            <small class="text-muted">Multiplataforma 8°A | 2023</small>
+            <p class="mb-0">Lideré un equipo de seis estudiantes para entregar una aplicación web de seguimiento de asistencias mediante metodologías ágiles.</p>
+        </div>
+    </div>
+
+    <!-- EDUCACIÓN -->
+    <div class="mb-4">
+        <h4 class="section-title">Educación</h4>
+        <div class="card-soft">
+            <h6 class="fw-bold">Ingeniería en Desarrollo de Software Multiplataforma</h6>
+            <small class="text-muted">Universidad Tecnológica del Estado de Zacatecas (UTEZ) · 2021-2025</small>
+        </div>
+        <div class="card-soft">
+            <h6 class="fw-bold">Certificado en Bases de Datos (MongoDB y MySQL)</h6>
+            <small class="text-muted">Cursos en línea certificados · 2024</small>
+        </div>
+        <div class="card-soft">
+            <h6 class="fw-bold">Preparatoria</h6>
+            <small class="text-muted">CECyTE Morelos · 2018-2021</small>
+        </div>
+    </div>
+
+    <!-- HABILIDADES -->
+    <div class="mb-4">
+        <h4 class="section-title">Habilidades</h4>
+        <div class="row">
+            <div class="col-md-6 col-12 mb-3">
+                <div class="card-soft h-100">
+                    <h6 class="fw-bold text-dark mb-3">Técnicas</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge badge-skill text-white">Python</span>
+                        <span class="badge badge-skill text-white">Django</span>
+                        <span class="badge badge-skill text-white">MongoDB</span>
+                        <span class="badge badge-skill text-white">MySQL</span>
+                        <span class="badge badge-skill text-white">Git y control de versiones</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <div class="card-soft h-100">
+                    <h6 class="fw-bold text-dark mb-3">Blandas</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-1">• Resolución de problemas</li>
+                        <li class="mb-1">• Comunicación efectiva</li>
+                        <li class="mb-1">• Trabajo colaborativo</li>
+                        <li class="mb-1">• Adaptabilidad</li>
+                        <li class="mb-1">• Gestión del tiempo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- REFERENCIAS -->
+    <div>
+        <h4 class="section-title">Referencias</h4>
+        <div class="card-soft">
+            <p class="mb-0">Referencias disponibles bajo solicitud; mentores y docentes de UTEZ y CECyTE respaldan los proyectos académicos presentados.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
