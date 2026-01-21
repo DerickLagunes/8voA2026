@@ -22,4 +22,5 @@ urlpatterns = [
     path('elias/', core.elias, name='elias'),  
     path('emiliano/', core.emiliano, name='emiliano'),  
     path('uxue/', core.uxue, name='uxue'),
+    path('abril/', core.abril , name='abril'),
 ]
