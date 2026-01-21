@@ -11,6 +11,7 @@ urlpatterns = [
     path('viri/', core.viri, name='viri'),
     path('orlando/', core.orlando, name='orlando'),
     path('johanna/', core.johanna,name='johanna'),
+    path('ander/', core.ander, name='ander'),
 
 
 ]
