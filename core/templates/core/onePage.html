@@ -7,8 +7,7 @@
             <h1>Bienvenido a mi onePage</h1>
             <h1>X</h1><br><h1>X</h1><br><h1>X</h1><br>
             <div class="col-10" id="contenido">
-
-            </div>
+                <img src="{% static 'img/logo.png' %}" />
         </div>
     </div>
 
@@ -26,7 +25,8 @@
 
         //2) un EventListener para captar el scroll
         window.addEventListener('scroll', () => {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) { 
+            if ((window.innerHeight + window.scrollY) 
+            >= document.body.offsetHeight) { 
                 loadText();
             }
         });
