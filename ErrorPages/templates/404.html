@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Error 404
+{% endblock %}
+
+{% block body %}
+<style xmlns:margin-bottom="http://www.w3.org/1999/xhtml">
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin: 20px auto;
+    }
+</style>
+<div>
+    <h1 style="color: red;font-size: 50px;"  >ERROR 404</h1>
+
+    <img alt="Hamburguesa triste" width="250"; src="https://i.ibb.co/4RNrqV88/Gemini-Generated-Image-6csw3y6csw3y6csw-removebg-preview.png" />
+
+    <h2 style="font-size: 60px;margin-bottom: 0">Upsi!... Esto no debió pasar</h2>
+    <p style="color: black; font-size: 20px;">Estos ingredientes no existen o fueron movidos a otro platillo.</p>
+
+    <a href="/">
+        <button style="padding: 10px 20px; cursor: pointer; background-color: orange;">Regresar al inicio</button>
+    </a>
+</div>
+
+{% endblock %}

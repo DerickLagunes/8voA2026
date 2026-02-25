@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mi CV Emiliano</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 0;
+      background: #f4f6f9;
+      color: #222;
+    }
+
+    .cv {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #ffffff;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
+
+    /* LEFT */
+    .left {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 30px 25px;
+    }
+
+    .profile-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .left h2 {
+      font-size: 16px;
+      margin-top: 30px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      padding-bottom: 6px;
+    }
+
+    .left p, .left li {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #d1d5db;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    /* RIGHT */
+    .right {
+      padding: 40px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #475569;
+      margin-bottom: 25px;
+    }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    section h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #0f172a;
+      border-left: 4px solid #2563eb;
+      padding-left: 10px;
+    }
+
+    section p, section li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #334155;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 16px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1 style="text-align:center; margin-top:30px;">Mi CV Emiliano</h1>
+
+<div class="cv">
+
+  <!-- LEFT COLUMN -->
+  <aside class="left">
+
+    <img
+      src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2025/06/usopp-time-skip.jpg?w=1600&h=1200&fit=crop"
+      alt="Imagen de perfil"
+      class="profile-img"
+    />
+
+    <h2>Datos generales</h2>
+    <p><strong>Nombre completo:</strong><br>
+      Emiliano Santiago Rodríguez Castañeda
+    </p>
+    <p><strong>Grado y grupo:</strong><br>
+      8° A
+    </p>
+    <p><strong>Carrera:</strong><br>
+      Ingeniería en Gestión y Desarrollo de Software
+    </p>
+
+    <h2>Idiomas</h2>
+    <ul>
+      <li>Español – Nativo</li>
+      <li>Inglés – Intermedio (B1)</li>
+    </ul>
+
+    <h2>Certificaciones</h2>
+    <ul>
+      <li>Curso Completo de Servicios Web REST en Java con Spring Boot – Udemy (2025)</li>
+      <li>Máster Completo en Java de Cero a Experto (+180 hrs) – Udemy (2025)</li>
+    </ul>
+
+  </aside>
+
+  <!-- RIGHT COLUMN -->
+  <main class="right">
+
+    <div class="subtitle">
+      Estudiante de Desarrollo de Software / Software Developer Student
+    </div>
+
+    <section>
+      <h2>Objetivo profesional</h2>
+      <p>
+        Desarrollador de software en formación con interés en el desarrollo web y móvil.
+        Busco integrarme a proyectos donde pueda aplicar mis conocimientos en frontend,
+        backend y bases de datos, aportando soluciones creativas, bien estructuradas y
+        orientadas a la calidad, mientras continúo creciendo profesionalmente.
+      </p>
+    </section>
+
+    <section>
+      <h2>Información general</h2>
+      <p>
+        Actualmente curso la carrera de Ingeniería en Gestión y Desarrollo de Software.
+        Cuento con experiencia académica y práctica en desarrollo de aplicaciones web
+        y móviles utilizando React, React Native con Expo y APIs REST con Spring Boot.
+        Soy una persona paciente, versátil y con facilidad para el análisis de requerimientos,
+        el pensamiento lógico y el trabajo en equipo.
+      </p>
+      <p>
+        Formé parte del Programa Educativo para Estudiantes Sobresalientes en el Área Intelectual,
+        donde adquirí experiencia temprana en C# y Unity, así como capacitación en oratoria
+        para la presentación efectiva de proyectos.
+      </p>
+    </section>
+
+    <section>
+      <h2>Habilidades</h2>
+      <div class="skills">
+        <span class="skill">React / Vite</span>
+        <span class="skill">React Native (Expo)</span>
+        <span class="skill">Java 17</span>
+        <span class="skill">Spring Boot</span>
+        <span class="skill">APIs REST</span>
+        <span class="skill">MySQL</span>
+        <span class="skill">MongoDB</span>
+        <span class="skill">Git & GitHub</span>
+        <span class="skill">Análisis de requerimientos</span>
+        <span class="skill">Pensamiento lógico</span>
+        <span class="skill">Trabajo en equipo</span>
+        <span class="skill">Comunicación asertiva</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Proyectos</h2>
+      <p>
+        <strong>Proyecto Resiliente (estadías):</strong><br>
+        Desarrollo de una API REST con Spring Boot y MySQL que alimenta una aplicación web
+        desarrollada con React y Node.js. El sistema cuenta con múltiples roles,
+        interfaces y despliegue funcional.
+      </p>
+      <p>
+        <strong>FisioPro (proyecto personal):</strong><br>
+        Plataforma para fisioterapeutas con gestión de pacientes, agenda, historia clínica,
+        generación de PDFs y sensores (goniómetro). Actualmente en fase de pruebas.
+      </p>
+    </section>
+
+  </main>
+</div>
+
+<pre style="max-width:1000px; margin:40px auto;">
+
+</pre>
+
+</body>
+</html>

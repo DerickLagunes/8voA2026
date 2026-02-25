@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <img rel="icon" type="image/png" href="https://img.icons8.com/nolan/1200/github.jpg">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        /* HEADER */
+        .cv-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cv-header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .cv-header p {
+            color: #777;
+            font-size: 1rem;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+
+        /* SECCIONES */
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+        }
+
+        /* LISTAS */
+        .list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        /* HABILIDADES */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: #ecf0f1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+
+        <div class="cv-header">
+            <h1>Angel Daniel Ocampo Martinez</h1>
+            <p>Estudiante de Desarrollo de Software Multiplataforma | 8° "A"</p>
+            <img src="https://avatars.githubusercontent.com/u/109121634?v=4" alt="Foto de Perfil" class="profile-img">
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Perfil</h2>
+            <p>
+                Soy una persona responsable, dedicada y con ganas de aprender y superarme cada día.
+                Mi objetivo profesional es convertirme en un desarrollador de software capaz de crear
+                soluciones innovadoras y eficientes que aporten valor a la sociedad.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Formación Académica</h2>
+            <p>
+                Educación secundaria completada en la Escuela Secundaria Técnica No. 11, con enfoque
+                en bases tecnológicas y desarrollo de habilidades académicas y personales.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Idiomas</h2>
+            <ul class="list">
+                <li>Español — Nativo</li>
+                <li>Inglés — Intermedio</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Certificaciones</h2>
+            <ul class="list">
+                <li>Fundamentos de Programación – Coursera</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills">
+                <span class="skill">Java</span>
+                <span class="skill">Python</span>
+                <span class="skill">JavaScript</span>
+                <span class="skill">HTML & CSS</span>
+                <span class="skill">Desarrollo Web</span>
+                <span class="skill">Trabajo en equipo</span>
+                <span class="skill">Resolución de problemas</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Experiencia</h2>
+            <p>
+                Prácticas profesionales en una empresa de desarrollo de software,
+                participando en proyectos de desarrollo web y colaboración en equipo.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Proyectos</h2>
+            <p>
+                Aplicación web para la gestión de tareas personales utilizando
+                HTML, CSS y JavaScript.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Referencias</h2>
+            <p>Disponibles a solicitud.</p>
+        </div>
+
+        <div class="footer">
+            © 2026 - Curriculum Vitae
+        </div>
+
+    </div>
+
+</body>
+</html>
