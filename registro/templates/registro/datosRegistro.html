@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Registrados</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-light min-vh-100 d-flex align-items-center">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-xl-7">
+
+            <div class="card shadow-lg border-0 rounded-4">
+                <div class="card-body p-4 p-md-5">
+
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-success mb-1">
+                            Registro completado con éxito
+                        </h3>
+                        <p class="text-muted mb-0">
+                            Los datos fueron validados correctamente por el sistema
+                        </p>
+                    </div>
+
+                    <!-- Datos -->
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle">
+                            <tbody class="fs-5">
+
+                                <tr>
+                                    <th>Nombre completo</th>
+                                    <td>{{ datos.nombre_completo }}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Matrícula UTEZ</th>
+                                    <td>{{ datos.matricula }}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Correo institucional</th>
+                                    <td>{{ datos.correo }}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>Teléfono móvil</th>
+                                    <td>{{ datos.telefono }}</td>
+                                </tr>
+
+                                <tr>
+                                    <th>RFC</th>
+                                    <td>{{ datos.rfc }}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="d-grid mt-4">
+                        <a href="{% url 'registro' %}" class="btn btn-primary btn-lg">
+                            Registrar otro alumno
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
