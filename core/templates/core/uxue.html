@@ -1,0 +1,103 @@
+<!-- CV-->
+<!--
+
+Nombre Completo
+Grado y grupo
+Carrera
+Imagen (no de nosotros mismos)
+Descripcion
+Objetivo profesional
+Formación general
+Idiomas
+Certificaciones
+Habilidades
+(NO SUBIR EL NUMERO DE TELEFONO NI TAMPOCO EL CORREO ELECTRONICO)
+
+-->
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container my-5">
+
+    <div class="card shadow-lg border-0">
+        <div class="card-body p-4">
+
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4 text-center">
+                    <img 
+                        src="https://st3.depositphotos.com/1010146/19350/v/450/depositphotos_193504506-stock-illustration-software-developer-coding-icon.jpg"
+                        class="img-fluid rounded-circle mb-3"
+                        alt="Imagen representativa"
+                    >
+                </div>
+                <div class="col-md-8">
+                    <h2 class="fw-bold mb-1">Adrian Uxue Chavez Martinez</h2>
+                    <p class="mb-1"><strong>8° A</strong></p>
+                    <p class="text-muted mb-0">
+                        Ingeniería en Desarrollo y Gestión de Software
+                    </p>
+                </div>
+            </div>
+
+            <hr>
+
+            <section class="mb-4">
+                <h4 class="fw-semibold">Sobre mí</h4>
+                <p class="text-justify">
+                    Joven morelense apasionado por la programación, con interés
+                    en el desarrollo de software y el fortalecimiento constante
+                    de sus habilidades técnicas.
+                </p>
+            </section>
+
+            <section class="mb-4">
+                <h4 class="fw-semibold">Objetivo profesional</h4>
+                <p>
+                    Desarrollar y fortalecer mis conocimientos en el área de mi
+                    carrera, aplicando lo aprendido en el aula para adquirir
+                    experiencia práctica y crecer profesionalmente.
+                </p>
+            </section>
+
+            <section class="mb-4">
+                <h4 class="fw-semibold">Formación general</h4>
+                <p>
+                    Ingeniería en Desarrollo y Gestión de Software en la
+                    Universidad Tecnológica Emiliano Zapata.
+                </p>
+            </section>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4 class="fw-semibold">Idiomas</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Español — Nativo</li>
+                        <li class="list-group-item">Inglés</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h4 class="fw-semibold">Certificaciones</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Oracle Introductions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section>
+                <h4 class="fw-semibold">Habilidades</h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Trabajo en equipo</li>
+                    <li class="list-group-item">Responsabilidad</li>
+                    <li class="list-group-item">Manejo básico de herramientas digitales</li>
+                    <li class="list-group-item">Conocimientos generales de programación</li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} CV - Rocio Rodríguez {% endblock %}</title>
+    <style>
+        :root {
+            --light-blue: #dbeafe;
+            --primary: #211C84;      /* Azul profundo */
+            --secondary: #4F5BD5;    /* Azul medio */
+            --accent: #7A77D8;       /* Lila medio */
+            --soft: #D6D4EF;         /* Lila claro */
+            --light-bg: #F2F1FA;
+            --text: #1f1f3a;
+            --border: #C3BFE5;
+            --soft-transparent: #d6d4ef8e; 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--border) 100%);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            padding: 40px 20px;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(30, 58, 138, 0.15);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cv-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .avatar-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            flex-shrink: 0;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-info h1 {
+            font-size: 2em;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .header-info p {
+            font-size: 1em;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+
+        .cv-content {
+            padding: 40px;
+        }
+
+        .cv-section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            font-weight: 600;
+        }
+
+        .objetivo-text {
+            color: var(--text);
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .formacion-item {
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border-bottom: 1px solid var(--border);padding: 10px;
+        }
+        .formacion-item:hover {
+            transform: translateX(8px);
+            box-shadow: 8px 8px 15px 0 var(--soft-transparent);
+            
+        }
+
+        .formacion-item h3 {
+            color: var(--secondary);
+            font-size: 1.1em;
+            margin-bottom: 4px;
+        }
+
+        .formacion-item p {
+            color: #7f8c8d;
+            margin-bottom: 2px;
+        }
+
+        .formacion-fecha {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #95a5a6;
+        }
+
+        .idiomas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .idioma-item {
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+        .idioma-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px var(--soft-transparent);
+        }
+
+        .idioma-nombre {
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 4px;
+        }
+
+        .idioma-nivel {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+
+        .certificacion-item {
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid var(--secondary);
+        }
+
+        .certificacion-item:hover {
+            background-color: var(--soft-transparent);
+            border-left: 4px solid var(--secondary);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .certificacion-item strong {
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .certificacion-item p {
+            color: #7f8c8d;
+            font-size: 0.95em;
+        }
+
+        .habilidades-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .habilidad-item {
+            padding: 8px 14px;
+            background-color: var(--soft-transparent);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--primary);
+            font-size: 0.9em;
+        }
+
+        .habilidad-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--soft-transparent);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            .cv-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .cv-content {
+                padding: 30px 20px;
+            }
+
+            .header-info h1 {
+                font-size: 1.6em;
+            }
+
+            .idiomas-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+
+            .cv-container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    {% block body %}
+    <div class="cv-container">
+        
+        <header class="cv-header">
+            <div class="avatar-container">
+                <img src="https://cdn-icons-png.flaticon.com/128/6833/6833595.png" alt="Foto de perfil">
+            </div>
+            
+            <div class="header-info">
+                <h1>Rocio Rodríguez Torres</h1>
+                <p>8vo cuatrimestre - Grupo A</p>
+                <p>Ingeniería en Desarrollo y Gestión de Software</p>
+            </div>
+        </header>
+
+        <main class="cv-content">
+            <section class="cv-section">
+                <h2 class="section-title">Objetivo Profesional</h2>
+                <p class="objetivo-text">
+                    Estudiante de Ingeniería en Desarrollo y Gestión de Software con sólidos conocimientos en desarrollo web y programación. Busco aplicar mis en proyectos reales que aporten valor a empresas o usuarios finales.
+                </p>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="section-title">Formación Académica</h2>
+
+                <div class="formacion-item">
+                    <h3>Ingeniería en Desarrollo y Gestión de Software</h3>
+                    <p>Universidad Tecnológica Emiliano Zapata</p>
+                    <p class="formacion-fecha">Agosto 2025 - Presente</p>
+                </div>
+
+                <div class="formacion-item">
+                    <h3>TSU en Desarrollo de Software Multiplataforma</h3>
+                    <p>Universidad Tecnológica Emiliano Zapata</p>
+                    <p class="formacion-fecha">2023 - 2025</p>
+                </div>
+
+                <div class="formacion-item">
+                    <h3>Bachillerato Tecnológico</h3>
+                    <p>Cecyte Plantel 03</p>
+                    <p class="formacion-fecha">2020 - 2023</p>
+                </div>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="section-title">Idiomas</h2>
+
+                <div class="idiomas-list">
+                    <div class="idioma-item">
+                        <div class="idioma-nombre">Español</div>
+                        <div class="idioma-nivel">Nativo</div>
+                    </div>
+
+                    <div class="idioma-item">
+                        <div class="idioma-nombre">Inglés</div>
+                        <div class="idioma-nivel">Intermedio - B1</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="section-title">Certificaciones</h2>
+                
+                <div class="certificacion-item">
+                    <strong>Java Foundations - Oracle Academy</strong>
+                    <p>6 Abr 2024</p>
+                </div>
+                <div class="certificacion-item">
+                    <strong>Introduction to MongoDB</strong>
+                    <p>9 Feb 2025</p>
+                </div>
+
+                <div class="certificacion-item">
+                    <strong>Linux Essentials - Cisco Networking Academy</strong>
+                    <p>28 Nov 2025</p>
+                </div>
+
+                <div class="certificacion-item">
+                    <strong>Endpoint Security - Cisco Networking Academy</strong>
+                    <p>28 Nov 2025</p>
+                </div>
+
+                <div class="certificacion-item">
+                    <strong>CCNA: Switching, Routing, and Wireless Essentials</strong>
+                    <p>16 May 2024</p>
+                </div>
+
+                <div class="certificacion-item">
+                    <strong>IT Essentials - Cisco Networking Academy</strong>
+                    <p>12 Dic 2023</p>
+                </div>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="section-title">Habilidades</h2>
+
+                <div class="habilidades-list">
+                    <span class="habilidad-item">Python</span>
+                    <span class="habilidad-item">Django</span>
+                    <span class="habilidad-item">HTML/CSS</span>
+                    <span class="habilidad-item">JavaScript</span>
+                    <span class="habilidad-item">SpringBoot</span>
+                    <span class="habilidad-item">SQL</span>
+                    <span class="habilidad-item">Git</span>
+                    <span class="habilidad-item">Bootstrap</span>
+                    <span class="habilidad-item">Tailwind</span>
+                    <span class="habilidad-item">MySQL</span>
+                    <span class="habilidad-item">Oracle Database</span>
+                    <span class="habilidad-item">API REST</span>
+                    <span class="habilidad-item">Angular</span>
+                    <span class="habilidad-item">React/React Native</span>
+                    
+                </div>
+            </section>
+
+        </main>
+    </div>
+    {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

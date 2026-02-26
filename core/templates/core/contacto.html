@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form id="formulario" method="post"> 
+    {% csrf_token %}    
+    {% for field in form %}
+        <div class="mb-3">
+            <label>{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+                <div style="color: red;">
+                    {{ field.errors|striptags }}
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <button type="submit">Enviar</button>
+</form>
+
+<div id="mensajes"></div>
+
+<h1>Contactos:</h1>
+<ul>
+{% for contacto in contactos %}
+<li>{{contacto.nombre}}</li>
+{% endfor %}
+</ul>
+
+
+
+<script>
+    const form = document.getElementById("formulario");
+    const mensajes = document.getElementById("mensajes");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // NO SE ENVIE EL FORMULARIO
+
+        //Información del form?
+        const formData = new FormData(form);
+
+        try{
+            const response = await fetch("", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest",
+                }
+            });
+            const data = await response.json();
+            if(data.status === 'ok'){
+                mensajes.innerHTML = `<p style="color: green;" >${data.mensaje}</p>`;
+                form.reset();
+            } else{
+                mensajes.innerHTML = `
+                <p style="color: red;" >${data.mensaje}</p>
+                <p style="color: red;" >${JSON.stringify(data.errors)}</p>
+                `;
+            }
+        }catch(error){
+            console.error("Error:",error);
+        }
+    });
+</script>
+{% endblock %}
