@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'mascota_api'
+    'mascota_api',
     'registro',
     'widget_tweaks',
+    'libro_api',
 ]
 
 MIDDLEWARE = [
@@ -80,9 +81,9 @@ WSGI_APPLICATION = 'ErrorPages.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mascotasA',
-        'USER': '8a',
-        'PASSWORD': 'contrasena123',
+        'NAME': 'test8a',
+        'USER': 'astDev',
+        'PASSWORD': 'desWeb123',
         'HOST': 'localhost',
         'PORT': '3306'
     }
