@@ -8,7 +8,3 @@ class Libro(models.Model):
     paginas = models.IntegerField()
     editorial = models.CharField(max_length=150)
     disponible = models.BooleanField(default=True)
-
-    class Meta:
-        managed = False
-        db_table = 'libro'

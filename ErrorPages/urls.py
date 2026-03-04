@@ -1,8 +1,14 @@
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from libro_api.views import LibroViewSet
 from django.urls import path
 from core import views as core
 from libro_api import views as libro_api
 from mascota_api import views as mascota_api
 from registro import views as registro
+
+router = DefaultRouter()
+router.register(r'libros', LibroViewSet, basename='libro')
 
 urlpatterns = [
     path('', core.index, name='index'),
@@ -33,8 +39,5 @@ urlpatterns = [
     path('registro/', registro.registro, name='registro'),
     path('datosRegistro/', registro.datosRegistro, name='datosRegistro'),
 
-    path('obtener/libros/', libro_api.get_libros, name='obtener_libros'),
-    path('nuevo/libro/', libro_api.create_libro, name='crear_libro'),
-    path('editar/libro/<int:pk>/', libro_api.update_libro, name='editar_libro'),
-    path('borrar/libro/<int:pk>/', libro_api.delete_libro, name='borrar_libro'),
+    path('api/', include(router.urls)),
 ]

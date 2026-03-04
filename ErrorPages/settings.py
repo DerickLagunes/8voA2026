@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'registro',
     'widget_tweaks',
     'libro_api',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

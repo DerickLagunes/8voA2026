@@ -7,7 +7,3 @@ class Mascota(models.Model):
     especie = models.CharField(max_length=30, blank=True, null=True)
     descripcion = models.TextField(blank=True, null=True)
     fecha_de_registro = models.DateField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'mascota_api_mascota'
